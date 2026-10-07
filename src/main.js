@@ -1,6 +1,6 @@
 import './style.css'
 
-const API_BASE = 'http://127.0.0.1:8000'
+const API_BASE = 'https://software-engineering-homework-backend.onrender.com'
 
 document.querySelector('#app').innerHTML = `
   <div class="page-container">
