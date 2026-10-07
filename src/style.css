@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  background: #f3f6fb;
+  color: #1f2937;
+}
+
+
+/* 页面 */
+
+.page-container {
+  width: 92%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* 标题 */
+
+.header {
+  text-align: center;
+  padding: 42px 0 28px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 38px;
+}
+
+.header p {
+  margin-top: 10px;
+  color: #6b7280;
+}
+
+
+/* 主区域 */
+
+.main-content {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 25px;
+  align-items: start;
+}
+
+
+/* 卡片 */
+
+.calculator-card,
+.history-card {
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+
+  box-shadow:
+    0 8px 30px
+    rgba(0, 0, 0, 0.08);
+}
+
+
+/* 显示屏 */
+
+.display {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+#expression {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+
+  font-size: 21px;
+  text-align: right;
+
+  padding: 10px 0;
+
+  color: #374151;
+}
+
+.result {
+  text-align: right;
+  font-size: 36px;
+  font-weight: bold;
+  min-height: 46px;
+}
+
+.error {
+  color: #dc2626;
+  text-align: right;
+  min-height: 20px;
+  font-size: 14px;
+}
+
+
+/* 计算器按钮 */
+
+.buttons {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 10px;
+}
+
+.btn {
+  height: 58px;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 19px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  background: #f1f5f9;
+
+  transition:
+    transform 0.1s,
+    background 0.2s;
+}
+
+.btn:hover {
+  background: #e2e8f0;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn-operator {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.btn-function {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.btn-equal {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-equal:hover {
+  background: #1d4ed8;
+}
+
+
+/* 历史记录 */
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom:
+    1px solid #e5e7eb;
+
+  padding-bottom: 15px;
+}
+
+.history-header h2 {
+  margin: 0;
+}
+
+.history-header p {
+  margin: 5px 0 0;
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.refresh-btn {
+  border: none;
+  border-radius: 8px;
+
+  padding: 9px 16px;
+
+  cursor: pointer;
+
+  background: #374151;
+  color: white;
+}
+
+
+/* 单条记录 */
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 0;
+
+  border-bottom:
+    1px solid #e5e7eb;
+}
+
+.history-expression {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.history-result {
+  font-size: 20px;
+  font-weight: bold;
+
+  color: #2563eb;
+
+  margin-top: 4px;
+}
+
+.history-time {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 7px;
+}
+
+
+/* 历史按钮 */
+
+.history-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.reuse-btn,
+.delete-btn {
+  border: none;
+  border-radius: 7px;
+
+  padding: 8px 11px;
+
+  cursor: pointer;
+}
+
+.reuse-btn {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.empty-history {
+  color: #9ca3af;
+  text-align: center;
+  padding: 40px;
+}
+
+
+/* 页脚 */
+
+footer {
+  text-align: center;
+
+  color: #9ca3af;
+
+  font-size: 13px;
+
+  padding: 30px 0;
+}
+
+
+/* 小屏幕 */
+
+@media (max-width: 800px) {
+
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+}
